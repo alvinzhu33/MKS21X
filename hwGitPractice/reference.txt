@@ -1,11 +1,14 @@
-git init
-git pull
-git status
-git log
-git add	filename
-git diff 
-git commit -m "Message"
-git push
-git checkout HEAD filename
-git reset HEAD filename
-git reset SHA
+git init			Initializes git
+git pull			Pulls the latest changes from git
+
+git status			Shows what files arent added to the staging area
+git log				Lists past commits
+
+git add	filename		Adds file to the staging area
+git diff 			Shows the difference of directory and staging area
+git commit -m "Message"		Permanently stores changes onto git
+git push			Pushes information onto git
+
+git checkout HEAD filename	Removes the changes made in the file in directory
+git reset HEAD filename		Removes the file from the staging area
+git reset SHA			Resets the repo into that of the SHA commit
