@@ -12,3 +12,5 @@ git push			Pushes information onto git
 git checkout HEAD filename	Removes the changes made in the file in directory
 git reset HEAD filename		Removes the file from the staging area
 git reset SHA			Resets the repo into that of the SHA commit
+
+BOGUS BOGUS
