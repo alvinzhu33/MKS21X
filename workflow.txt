@@ -1,0 +1,13 @@
+Standard Procedure
+1. Cd into the right directory and git init
+2. git pull
+3. Edit
+4. git add (files changes)
+5. git status
+6. git commit -m "Message"
+7. git push
+
+Resetting
+1. git log
+2. git checkout HEAD SHA
+3. git push
