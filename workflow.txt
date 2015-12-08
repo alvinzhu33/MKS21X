@@ -12,13 +12,14 @@ Standard Procedure
 3. git pull
 4. git status
 5. Edit any files you want
-6. git status
+6. git status (to check whether files were changed)
 7. git add *all the files in red from the git status*
-8. git status
+8. git status (to check if all files are added)
 9. git commit -m "Message"
 10. git push
-11. Repeat all Steps 4-9 (10 is optional) every time you want to change the repo again
-12. Once you're done for the day/are leaving: git push
+11. git status (to check if it's pushed)
+12. Repeat all Steps 4-9 (10 is optional) every time you want to change the repo again
+13. Once you're done for the day/are leaving: git push
 
 Resetting
 1. git log
