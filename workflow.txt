@@ -1,13 +1,27 @@
+Beginning Procedure
+1. Create a new repository on Github
+2. Initalize the repo with a README.md
+3. Click into the repo and copy the HTTPS
+4. On your computer, cd into the desired area on where you want to clone the repo
+5. git clone *HTTPS copied link*
+6. cd into the new directory and start working
+
 Standard Procedure
-1. Cd into the right directory and git init
-2. git pull
-3. Edit
-4. git add (files changes)
-5. git status
-6. git commit -m "Message"
-7. git push
+1. Cd into the right directory
+2. git init
+3. git pull
+4. git status
+5. Edit any files you want
+6. git status
+7. git add *all the files in red from the git status*
+8. git status
+9. git commit -m "Message"
+10. git push
+11. Repeat all Steps 4-9 (10 is optional) every time you want to change the repo again
+12. Once you're done for the day/are leaving: git push
 
 Resetting
 1. git log
-2. git checkout HEAD SHA
-3. git push
+2. Copy down the first 7 letters of the SHA of the commit you want to revert back to
+3. git checkout *SHA (copied)* .
+4. git push
