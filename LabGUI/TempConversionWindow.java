@@ -44,16 +44,18 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent e){
 	String event = e.getActionCommand();
-	if(event.equals("CtoF")){
+	try{
 	    Double s = Double.parseDouble(t.getText());
-	    j.setText(String.valueOf(CtoF(s)) + " degree Fahrenheit");
+	    if(event.equals("CtoF")){
+		j.setText(String.valueOf(CtoF(s)) + " degree Fahrenheit");
+	    }
+	    if(event.equals("FtoC")){
+		j.setText(String.valueOf(FtoC(s)) + " degree Celsius");
+	    }
 	}
-	if(event.equals("FtoC")){
-	    Double s = Double.parseDouble(t.getText());
-	    j.setText(String.valueOf(FtoC(s)) + " degree Celsius");
+	catch(NumberFormatException f){
+	    j.setText("Please enter a number!");
 	}
+	
     }
- 
-
-
 }
