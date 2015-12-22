@@ -2,6 +2,8 @@ public class BarCode implements Comparable{
     private String _zip;
     private int _checkDigit;
 
+    private static String[] key = new String[]{"||:::",":::||","::|:|","::||:",":|::|",":|:|:",":||::","|:::|","|::|:","|:|::"};
+
     // constructors
     //precondtion: zip.length() = 5 and zip contains only digits.
     //postcondition: throws a runtime exception zip is not the correct length
@@ -17,7 +19,8 @@ public class BarCode implements Comparable{
 
     // postcondition: Creates a copy of a bar code.
     public BarCode(BarCode x){
-	_checkDigit=checkSum();
+	_zip= ((BarCode) x)._zip;
+	_checkDigit= ((BarCode)x)._checkDigit;
     }
 
 
@@ -25,27 +28,35 @@ public class BarCode implements Comparable{
     private int checkSum(){
 	int sum=0;
 	for(int x=1; x<(_zip.length());x++){
-	    sum+= (int)(_zip.substring(x-1,x));
+	    sum+= Integer.parseInt(_zip.substring(x-1,x));
 	}
-	return sum;
+	return sum%10;
     }
 
     //postcondition: format zip + check digit + barcode 
     //ex. "084518  |||:::|::|::|::|:|:|::::|||::|:|"      
-    public String toString(){}
+    public String toString(){
+	String barcoded="|";
+	for(int x=1; x<_zip.length(); x++){
+	    barcoded+=key[Integer.parseInt(_zip.substring(x-1,x))];
+	}
+	barcoded+=key[_checkDigit]+"|";
+	return barcoded;
+    }
 
 
     public boolean equals(Object other){
-	return this=other ||
-	    (other instance of BarCode &&
-	     _zip.equals((BarCode)other)._zip);
+	return this==other ||
+	    (other instanceof BarCode &&
+	     _zip.equals(((BarCode)other)._zip));
     }
     // postcondition: false if the object is not a BarCode, 
     // false if it is a non-matching barcode
     // true when they match.
 
 
-    public int compareTo(Comparable other){}
+    public int compareTo(Object other){
+	return 1;
+    }
     // postcondition: compares the zip + checkdigit
-
 }
