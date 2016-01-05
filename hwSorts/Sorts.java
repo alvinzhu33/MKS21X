@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Sorts{
     public static void printArray(int[]data){
       String show="[ "+data[0];
@@ -49,26 +51,36 @@ public class Sorts{
    }
 
     //My Code
-    /*public static void insertionSort(int[]data){
-      int[] copy= new int[data.length];
-      copy[0]=data[0];
-      if(data[1]<=copy[0]){
-         copy[1]=copy[0];
-         copy[0]=data[1];
-      }
-      else{
-         copy[1]=data[1];
-      }
-      for(int i=2; i<data.length; i++){
-         copy=add(copy, data[i]);
-      }
-      for(int i=0; i<copy.length; i++){
-         data[i]=copy[i];
-      }
-      //your code here to make data re-order its elements
-      //from least to greatest just like we did in class
-      //same algorithm as the way you created your OrderedSuperArray
-      }*/
+    public static void insertionSort(int[]data){
+	/*int[] copy= new int[data.length];
+	copy[0]=data[0];
+	if(data[1]<=copy[0]){
+	    copy[1]=copy[0];
+	    copy[0]=data[1];
+	}
+	else{
+	    copy[1]=data[1];
+	}
+	for(int i=2; i<data.length; i++){
+	    copy=add(copy, data[i]);
+	}
+	for(int i=0; i<copy.length; i++){
+	    data[i]=copy[i];
+	    }*/
+	for(int index=1; index<data.length; index++){
+	    int value=data[index];
+	    int swapIndex =index;
+	    while(swapIndex>0 && data[swapIndex-1]>value){
+		data[swapIndex]=data[swapIndex-1];
+		swapIndex--;
+	    }
+	    data[swapIndex]=value;
+	    printArray(data);
+	}
+	//your code here to make data re-order its elements
+	//from least to greatest just like we did in class
+	//same algorithm as the way you created your OrderedSuperArray
+    }
 
     /*public static void fillRandom(int[] data){
 	for(int i=0; i<data.length; i++){
@@ -79,7 +91,7 @@ public class Sorts{
 	}
 	}*/
 
-    //Mr.K's code
+    /*Mr.K's code
     public static void insertionSort(int[] data){
 	for(int i=1; i<data.length; i++){
 	    int current=data[i];
@@ -90,7 +102,7 @@ public class Sorts{
 	    }
 	    data[j]=current;
 	}
-    }
+	}*/
 
     public static void selectionSort(int[] data){
 	for(int index=0; index<data.length; index++){
@@ -105,6 +117,7 @@ public class Sorts{
 	    }
 	    data[index]=next;
 	    data[storeIndex]=storeValue;
+	    printArray(data);
 	}
     }
 }
