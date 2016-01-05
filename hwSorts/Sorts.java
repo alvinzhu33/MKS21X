@@ -93,29 +93,6 @@ public class Sorts{
     }
 
     public static void selectionSort(int[] data){
-	/*int[] newSorted = new int[data.length];
-	int placeIndex=0;
-	while(data.length>0){
-	    int next = data[0];
-	    int storeIndex=-1;
-	    for(int index=0; index<data.length; index++){
-		if(data[index]<=next){
-		    next=data[index];
-		    storeIndex=index;
-		}
-	    }
-	    newSorted[placeIndex]=next;
-	    int[] copy= new int[data.length-1];
-	    int newIndex=0;
-	    for(int index=0; index<data.length; index++){
-		if(index!=storeIndex){
-		    copy[newIndex]=data[index];
-		    newIndex++;
-		}
-	    }
-	    data=copy;
-	}
-	data=newSorted;*/
 	for(int index=0; index<data.length; index++){
 	    int next=data[index];
 	    int storeValue=data[index];
