@@ -13,13 +13,15 @@ public class Driver{
 	    }*/
 
 	Sorts.printArray(tester);
-	Sorts.selectionSort(tester);
-	Sorts.insertionSort(tester2);
+	//Sorts.selectionSort(tester);
+	//Sorts.insertionSort(tester2);
+	Sorts.bubbleSort(tester);
 	Sorts.printArray(tester);
 
 	int[] i1= new int[]{-12,6,2,6,73,174,23,8,2,-11,73,-111};
 	Sorts.printArray(i1);
-	Sorts.selectionSort(i1);
+	//Sorts.selectionSort(i1);
+	Sorts.bubbleSort(i1);
 	Sorts.printArray(i1);
     }
 }

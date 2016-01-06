@@ -95,10 +95,17 @@ public class Sorts{
     }
 
     public static void bubbleSort(int[]data){
-	for(int x=0; x<data.length; x++){
-	    for(int y=x; y<data.length-x; y--){
-		if(data[y]<
+	for(int place=1; place<data.length; place++){
+	    int index=1;
+	    while(index+place<=data.length){
+		int storeValue=data[index-1];
+		if(data[index-1]>data[index]){
+		    data[index-1]=data[index];
+		    data[index]=storeValue;
+		}
+		index++;
 	    }
+	    printArray(data);
 	}
     }
 }
