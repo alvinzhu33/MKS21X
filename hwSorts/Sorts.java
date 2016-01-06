@@ -50,7 +50,6 @@ public class Sorts{
       return copy;
    }
 
-    //My Code
     public static void insertionSort(int[]data){
 	for(int index=1; index<data.length; index++){
 	    int value=data[index];
@@ -62,19 +61,14 @@ public class Sorts{
 	    data[swapIndex]=value;
 	    printArray(data);
 	}
-	//your code here to make data re-order its elements
-	//from least to greatest just like we did in class
-	//same algorithm as the way you created your OrderedSuperArray
     }
-
-    /*public static void fillRandom(int[] data){
-	for(int i=0; i<data.length; i++){
-	    int sign=(int)Math.pow(-1, (int)(Math.random()*2));
-	    data[i]= sign*(int)(Math.random()*Integer.MAX_VALUE);
-	    //Integer is a class
-	    //MAX_VALUE is a public, static, and final variable
+    
+    public static void fillRandom(int[] data){
+	for(int x=0; x<data.length; x++){
+	    int pm = (int)Math.pow(-1,(int)Math.random()*2);
+	    data[x]= pm*(int)(Math.random()*Integer.MAX_VALUE);
 	}
-	}*/
+    }
 
 
     public static void selectionSort(int[] data){

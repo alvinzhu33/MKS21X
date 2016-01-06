@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Driver2{
     public static void main(String[]args){
         int size = 10000;
@@ -28,9 +30,11 @@ public class Driver2{
         }
         if(order.equals("reversed")){
             Arrays.sort(ary);
-            for(int i = 0; i < ary.length / 2; i++){
-                Sorts.swap(ary,i,ary.length-i-1);
-            }
+	    int[] copy = new int[ary.length];
+            for(int i=0; i<ary.length; i++){
+		copy[i]=ary[ary.length-i-1];
+	    }
+	    ary=copy;
         }
 
         long start = System.currentTimeMillis();
