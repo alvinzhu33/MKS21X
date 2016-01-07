@@ -59,7 +59,7 @@ public class Sorts{
 		swapIndex--;
 	    }
 	    data[swapIndex]=value;
-	    printArray(data);
+	    //printArray(data);
 	}
     }
     
@@ -84,7 +84,7 @@ public class Sorts{
 	    }
 	    data[index]=next;
 	    data[storeIndex]=storeValue;
-	    printArray(data);
+	    //printArray(data);
 	}
     }
 
@@ -99,7 +99,7 @@ public class Sorts{
 		}
 		index++;
 	    }
-	    printArray(data);
+	    //printArray(data);
 	}
     }
 }
